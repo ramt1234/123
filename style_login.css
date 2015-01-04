@@ -1,0 +1,105 @@
+#titulo {
+  width: 1000px;
+  height:110px;
+  margin:auto;
+  border: 3px solid black;
+  background:black;
+  font-family:"Calibri";
+}
+
+#titulo a {
+  color:white; 
+  font-size:50px;
+  font-style:normal;
+  font-weight:strong;
+  text-decoration:none;
+}
+
+#titulo p {
+  color:white; 
+  font-size:30px;
+  font-style:normal;
+  font-weight:strong;
+  text-decoration:none;
+}
+  
+  
+#utilizador{
+  width: 1000px;
+  height:30px;
+  margin:auto;
+  font-style:normal;
+  font-weight:strong;
+  border: 3px solid black;
+  text-align:right;
+}
+
+#utilizador ul {
+  margin:0;
+  padding:0;
+  list-style:none;
+}
+#utilizador li {
+  display:inline;
+  margin:0;
+  padding:0;
+}
+
+#utilizador a {
+  color:black; 
+  font-style:italic;
+  font-weight:strong;
+  text-decoration:none;
+}
+
+
+#corpo{
+  width: 1000px;
+  height:420px;
+  margin:auto;
+  border: 3px solid black;
+  text-align:center;
+  vertical-align:middle;
+  background-image: url(imagens/feup.jpg);
+  background-repeat:no-repeat;
+  background-attachment:fixed;
+  background-position:center; 
+}
+
+
+#imagem{
+ 
+  height: 210px;
+  width: 1000px;  
+  image-align:center;
+  vertical-align:middle;
+  display: block;
+
+}
+
+
+
+#rodape{
+  width: 1000px;
+  height:60px;
+  margin:auto;
+  border: 3px solid black;
+  clear:both;
+  font-family:"Calibri";  
+  background:black;
+}
+
+#rodape p {
+  color:white; 
+  font-size:15px;
+  text-align:center;
+}
+#rodape a {
+  color:white; 
+  font-size:15px;
+  font-style:normal;
+  font-weight:normal;
+  text-decoration:none;
+}
+
+

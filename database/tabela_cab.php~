@@ -1,0 +1,147 @@
+<?php
+
+function display_tabela_cab($cab)
+{
+echo "<div id=\"tabela\">";
+/*cabecalho da tabela */
+    echo "<table border=1>";
+        echo '<tr> <th>Cab ID</th> <th>Valor Pedido</th> <th>Descrição resposta</th> <th>Resposta</th> <th>Requerimento</th> <th>Criado por</th> <th>Apreciado por</th></tr>';
+        
+/*linhas da tabela*/
+
+      $num_linhas = sizeof(get_cabi_cc($cab));
+      $a=get_cabi_cc($cab);
+      $i = 0;
+  
+      while ($i < $num_linhas) {
+      
+        echo "<tr>";
+		 echo "<td>".$a[$i]['cab_id']."</td><td>".$a[i]['cab_valorpedido']."</td><td>".$a[i]['cab_descricao_resposta']."</td><td>".$a[i]['cab_resposta']."</td><td>".$a[i]['cab_requerimento']."</td><td>".$a[i]['cab_criado_por']."</td><td>".$a[i]['cab_apreciado_por']."</td><td>";
+        echo "</tr>";
+    
+      $i++;
+      }
+
+    echo "</table>";
+  echo "</div>";
+}
+
+function display_tabela_cab_apr($cab)
+{
+echo "<div id=\"tabela\">";
+/*cabecalho da tabela */
+    echo "<table border=1>";
+        echo '<tr> <th>Cab ID</th> <th>Valor Pedido</th> <th>Descrição resposta</th> <th>Resposta</th> <th>Requerimento</th> <th>Criado por</th> <th>Apreciado por</th></tr>';
+        
+/*linhas da tabela*/
+
+      $num_linhas = sizeof(get_cabi_apreciado($cab));
+      $b=get_cabi_apreciado($cab);
+      $o = 0;
+  
+      while ($o < $num_linhas) {
+      
+        echo "<tr>";
+		 echo "<td>".$b[$o]['cab_id']."</td><td>".$b[$o]['cab_valorpedido']."</td><td>".$b[$o]['cab_descricao_resposta']."</td><td>".$b[$o]['cab_resposta']."</td><td>".$b[$o]['cab_requerimento']."</td><td>".$b[$o]['cab_criado_por']."</td><td>".$b[$o]['cab_apreciado_por']."</td><td>";
+        echo "</tr>";
+    
+      $o++;
+      }
+
+    echo "</table>";
+  echo "</div>";
+}
+function display_tabela_cab_not($cab)
+{
+echo "<div id=\"tabela\">";
+/*cabecalho da tabela */
+    echo "<table border=1>";
+        echo '<tr> <th>Cab ID</th> <th>Valor Pedido</th> <th>Descrição resposta</th> <th>Resposta</th> <th>Requerimento</th> <th>Criado por</th> <th>Apreciado por</th></tr>';
+        
+/*linhas da tabela*/
+
+      $num_linhas = sizeof(get_cabi_not_apr($cab));
+      $c=get_cabi_not_apr($cab);
+      $p = 0;
+  
+      while ($p < $num_linhas) {
+      
+        echo "<tr>";
+		 echo "<td>".$c[$p]['cab_id']."</td><td>".$c[$p]['cab_valorpedido']."</td><td>".$c[$p]['cab_descricao_resposta']."</td><td>".$c[$p]['cab_resposta']."</td><td>".$c[$p]['cab_requerimento']."</td><td>".$c[$p]['cab_criado_por']."</td><td>".$c[$p]['cab_apreciado_por']."</td><td>";
+        echo "</tr>";
+    
+      $p++;
+      }
+
+    echo "</table>";
+  echo "</div>";
+}
+
+function display_tabela_cab_mudar($cab)
+{
+echo "<div id=\"tabela\">";
+/*cabecalho da tabela */
+    echo "<table border=1>";
+        echo '<tr> <th>Cab ID</th> <th>Valor Pedido</th> <th>Descrição resposta</th> <th>Resposta</th> <th>Requerimento</th> <th>Criado por</th> <th>Apreciado por</th></tr>';
+        
+/*linhas da tabela*/
+
+      $num_linhas = sizeof(get_cabi_cc($cab));
+      $d=get_cabi_cc($cab);
+      $u = 0;
+  
+      while ($u < $num_linhas) {
+      
+        echo "<tr>";
+		 echo "<td><a href=gerir_cab.php?cab_id=".$d[$u]['cab_id']."&cc_id=".$d[$u]['cab_criado_por'].">".$d[$u]['cab_id']."</a></td><td>".$d[$u]['cab_valorpedido']."</td><td>".$d[$u]['cab_descricao_resposta']."</td><td>".$d[$u]['cab_resposta']."</td><td>".$d[$u]['cab_requerimento']."</td><td>".$d[$u]['cab_criado_por']."</td><td>".$d[$u]['cab_apreciado_por']."</td><td>";
+        echo "</tr>";
+    
+      $u++;
+      }
+
+    echo "</table>";
+  echo "</div>";
+}
+
+
+/*
+function display_tabela_ccustos_ben($cc_ben)
+{
+echo "<div id=\"tabela\">";
+/*cabecalho da tabela 
+    echo "<table border=1>";
+        echo '<tr> <th>Nome do CC</th> <th>Período</th> <th>Tipo de Financiamento</th> <th>Nome Curto do CC</th> <th>Saldo</th> <th>Descrição</th> <th>CC financiamento</th> <th>Gerente</th> </tr>';
+        
+/*linhas da tabela
+
+      $num_linhas = sizeof(get_ccs_benificia($cc_ben));
+      $b=get_ccs_benificia($cc_ben);
+      $o = 0;
+  
+      while ($o < $num_linhas) {
+      
+        echo "<tr>";
+        echo "<td><a href=operacoes_cc.php?cc_id=".$b[$o]['cc_id']."&nome_cc=".$b[$o]['cc_nome']."&bi_gestor=".$b[$o]['cc_gerente'].">".$b[$o]['cc_nome']."</a></td><td>".$b[o]['cc_periodo']."</td><td>".$b[o]['cc_tipo_financ']."</td><td>".$b[o]['cc_nome_curto']."</td><td>".$b[o]['cc_saldo']."</td><td>".$b[o]['cc_descricao']."</td><td>".$b[o]['cc_financi']."</td><td>".$b[o]['cc_gerente']."</td><td>";
+        echo "</tr>";
+    
+      $o++;
+      }
+
+    echo "</table>";
+  echo "</div>";
+
+}*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
